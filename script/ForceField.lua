@@ -232,7 +232,6 @@ function normalize_field(ff)
     local points = flatten(ff.field)
     if #points > FF.MAX_SIM_POINTS then
         -- sort the points from least to greatest magnitude
-        table.sort(points, function (p1, p2) return p1.mag < p2.mag end )
         while #points > FF.MAX_SIM_POINTS do
             local index = math.random(#points) --math.ceil((1.6 * math.random() - 1)^2 * #points)
             if index ~= 0 then 
